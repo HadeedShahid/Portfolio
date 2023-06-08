@@ -91,7 +91,7 @@ const PortfolioSection=(props)=>{
                                         <div className={styles.button_container_1}>
                                             <span className={styles.mas}>
                                                     Visit
-                                                    <img src="/Icons/right_arrow.svg"></img>
+                                                    <img src="/icons/right_arrow.svg"></img>
                                                 </span>
                                             <button id='work' type="button" name="Hover">
                                                 Visit
