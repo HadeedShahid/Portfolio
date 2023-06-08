@@ -1,0 +1,43 @@
+.logo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.2em;
+  }
+.H{
+    background: linear-gradient(180deg, #5BE9B7 52.12%, #6E07F3 54.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bdy{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2em;
+    color: #293347;
+}
+@media only screen and (max-width: 550px) {
+
+    .logo{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.2em;
+    }
+    .bdy{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.2em;
+
+    }
+
+}

@@ -1,0 +1,288 @@
+.backimg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform: translate(-60%,-30%);
+    width: 1200px;
+    height: 1200px;
+}
+.hero{
+    position: relative;
+    /* border: 2px solid green; */
+    /* max-height: 100vh; */
+    height: 100vh;
+    min-height: 850px;
+    max-height: 1080px;
+    /* min-height: min-content; */
+    /* overflow: hidden; */
+    /* overflow: hidden; */
+    
+}
+.hero_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 2px solid blue; */
+    margin: 0 auto;
+    height: 90%;
+    /* padding-top: 100px; */
+    margin-top: 100px;
+    
+}
+.hero_title{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 101px;
+    letter-spacing: -0.05em;
+    color: #293347;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hero_desc{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #474747;
+
+    margin-bottom: 40px;
+}
+/* .hero_text img{
+    width: 215px;
+    height: 230px;
+} */
+.animate{
+    /* z-index: -10; */
+    
+    position: absolute;
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+    outline: none;
+}
+.animate_up{
+    /* z-index: -10; */
+    
+    position: absolute;
+    transform: translatey(0px);
+	animation: float_up 6s ease-in-out infinite;
+    outline: none;
+}
+.float_bot_right{
+    /* z-index: -10; */
+    
+    position: absolute;
+    /* transform: translatey(0px); */
+	animation: float_bot_right 6s ease-in-out infinite;
+    outline: none;
+}
+.float_bot_left{
+    position: absolute;
+    /* transform: translatey(0px); */
+	animation: float_bot_left 6s ease-in-out infinite;
+    outline: none;
+}
+.figma{
+    top: 25%;
+    left: 5%;
+    z-index: -1;
+}
+.tail{
+    top: 40%;
+    left: 25%;
+    z-index: -1;
+}
+.react{
+    bottom: 20%;
+    left: 10%;
+    z-index: -1;
+}
+.graph{
+    top:55%;
+    left: 47%;
+    z-index: -1;
+}
+.mongo{
+    top: 50%;
+    right: 15%;
+    z-index: -1;
+}
+.next{
+    top: 20%;
+    right: 10%;
+    z-index: -1;
+}
+@keyframes float_bot_left {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		/* transform: translatey(0px); */
+        /* transform: translatex(0px); */
+        transform: translate(0px,0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		/* transform: translatey(20px); */
+        /* transform: translatex(20px); */
+        transform: translate(-20px,-20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		/* transform: translatey(0px); */
+        /* transform: translatex(0px); */
+        transform: translate(0px,0px);
+	}
+}
+@keyframes float_bot_right {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		/* transform: translatey(0px); */
+        /* transform: translatex(0px); */
+        transform: translate(0px,0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		/* transform: translatey(20px); */
+        /* transform: translatex(20px); */
+        transform: translate(20px,20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		/* transform: translatey(0px); */
+        /* transform: translatex(0px); */
+        transform: translate(0px,0px);
+	}
+}
+@keyframes float_up {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+@keyframes float {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero_title{
+        font-size: 60px;
+    }
+    .hero_desc{
+        font-size: 15px;
+    }
+    .myimg{
+        width: 188px;
+        height: 208px;
+    }
+    .med img{
+        width: 110px;
+        height: 114px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tail{
+        top: 40%;
+        left: 15%;
+        z-index: -1;
+    }
+    .graph{
+        top:75%;
+        left: 47%;
+        z-index: -1;
+    }
+    
+}
+@media only screen and (max-width: 550px) {
+    .hero_title{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -0.05em;
+    }
+    .hero_desc{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+    }
+    .myimg{
+        width: 133px;
+        height: 145px;
+    }
+    .med img{
+        width: 60px;
+        height: 64px;
+    }
+    .hero{
+        min-height: 500px;
+        /* max-height: ; */
+        /* min-height: min-content; */
+        /* overflow: hidden; */
+        /* overflow: hidden; */
+        
+    }
+
+    .figma{
+        top: 10%;
+        left: 2%;
+        z-index: -1;
+    }
+    .tail{
+        top: 20%;
+        left: 15%;
+        z-index: -1;
+    }
+    .react{
+        bottom: 50%;
+        left: 10%;
+        z-index: -1;
+    }
+    .graph{
+        top:45%;
+        left: 47%;
+        z-index: -1;
+    }
+    .mongo{
+        top: 30%;
+        right: 10%;
+        z-index: -1;
+    }
+    .next{
+        top: 10%;
+        right: 10%;
+        z-index: -1;
+    }
+    .backimg{
+        width: 600px;
+        height: 600px;
+    }
+}

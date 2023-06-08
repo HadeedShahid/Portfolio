@@ -1,0 +1,30 @@
+.layout{
+    width: 100%;
+    max-width: 2560px;
+    /* max-width: 1800px; */
+    /* border: 2px solid red; */
+    /* height: fit-content; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+.container{
+    /* border: 2px solid black; */
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 32px;
+    /* height: fit-content; */
+}
+.horizontal_line{
+    border: 1px solid rgba(179, 179, 179, 0.66);
+    transform: rotate(180deg);
+    max-width: 1280px;
+    width: 100%;
+    margin: 70px auto;
+}
+@media only screen and (max-width: 768px) {
+    .horizontal_line{
+        margin: 40px auto;
+        width: 90%;
+    }
+}

@@ -1,0 +1,192 @@
+.container{
+    position: relative;
+    height: 459px;
+    width: 100%;
+    margin-top: 135px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* overflow: hidden; */
+}
+
+.logo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    z-index: 5;
+}
+.sent{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    /* text-align: center; */
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    /* border: 2px solid red; */
+    z-index: 5;
+}
+.icons{
+    width: 100%;
+    /* border: 2px solid red; */
+    max-width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link:hover{
+    cursor: pointer;
+    text-decoration: none;
+    /* background-color: #e4e4e4; */
+}
+.gmail{
+    width: 32px;
+    height: 24px;
+}
+.linkedin{
+    width: 32px;
+    height: 32px;
+}
+.github{
+    width: 35px;
+    height: 35px;
+}
+.twitter{
+    width: 32px;
+    height: 28px;
+}
+.left_img , .right_img{
+    position: absolute;
+}
+.left_img{
+    width: 1200px;
+    height: 1300px;
+    left: -400px;
+    top: -60%;
+    z-index: 0;
+}
+.right_img{
+    width: 975px;
+    height: 975px;
+    right: 0;
+    top: -110%;
+    z-index: 0;
+}
+.animate{
+    /* z-index: -10; */
+    
+    position: absolute;
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+    outline: none;
+}
+.animate_right{
+    /* z-index: -10; */
+    
+    position: absolute;
+    transform: translatex(0px);
+	animation: float-x 6s ease-in-out infinite;
+    outline: none;
+}
+@keyframes float {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+@keyframes float-x {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatex(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatex(20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatex(0px);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+    .right_img{
+        width: 500px;
+        height: 600px;
+        top: -30%;
+        /* bottom: 0; */
+    }
+    .left_img{
+        width: 700px;
+        height: 700px;
+        z-index: 1;
+        top: -100px;
+        left: -250px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .logo{
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    .sent{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .gmail{
+        width: 23px;
+        height: 17px;
+    }
+    .linkedin{
+        width: 23px;
+        height: 23px;
+    }
+    .github{
+        width: 23px;
+        height: 23px;
+    }
+    .twitter{
+        width: 23px;
+        height: 20px;
+    }
+    .icons{
+        max-width: 180px;
+    }
+    .right_img{
+        width: 500px;
+        height: 600px;
+        top: -20%;
+        right: -100px;
+    }
+    .left_img{
+        width: 550px;
+        height: 550px;
+        top: -100px;
+        left: -330px;
+    }
+}
