@@ -112,11 +112,11 @@ const PortfolioSection=(props)=>{
                                             <div className={styles.button_container_1}>
                                                 <span className={styles.mas}>
                                                         Visit
-                                                        <img src="/Icons/right_arrow.svg"></img>
+                                                        <img src="/icons/right_arrow.svg"></img>
                                                     </span>
                                                 <button id='work' type="button" name="Hover">
                                                     Visit
-                                                    <img src="/Icons/right_arrow.svg"></img>
+                                                    <img src={"/icons/right_arrow.svg"}></img>
                                                     </button>
                                             </div>
                                         </a>
@@ -130,7 +130,7 @@ const PortfolioSection=(props)=>{
                                                 <div className={styles.card_type}>Type: <span>{project.type}</span></div>
                                                 <div className={styles.date}>{project.date}</div>
                                             </div>
-                                        <img src="/Icons/slant.svg"></img>
+                                        <img src="/icons/slant.svg"></img>
                                     </a>
                                 </div>
                             </div>

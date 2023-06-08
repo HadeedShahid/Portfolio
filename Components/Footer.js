@@ -2,8 +2,8 @@ import styles from './Footer.module.css';
 const Footer=()=>{
     return (
         <div className={`bck_pl ${styles.container}`}>
-            <img src='/Icons/left.png' className={`${styles.left_img}`}></img>
-            <img src='/Icons/right.png' className={`${styles.animate} ${styles.right_img}`}></img>
+            <img src='/icons/left.png' className={`${styles.left_img}`}></img>
+            <img src='/icons/right.png' className={`${styles.animate} ${styles.right_img}`}></img>
                 <div className={styles.logo}>Hadeed_.</div>
                 <div className={styles.sent}>One Pixel at a Time.</div>
                 <div className={styles.icons}>
