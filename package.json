@@ -11,6 +11,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.24.0",
     "@react-spring/web": "^9.7.2",
+    "@vercel/analytics": "^1.0.1",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "next": "13.4.1",
