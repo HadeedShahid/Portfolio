@@ -95,7 +95,7 @@ const PortfolioSection=(props)=>{
                                                 </span>
                                             <button id='work' type="button" name="Hover">
                                                 Visit
-                                                <img src="/Icons/right_arrow.svg"></img>
+                                                <img src="/icons/right_arrow.svg"></img>
                                                 </button>
                                         </div>
                                     </a>
