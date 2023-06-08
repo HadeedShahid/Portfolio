@@ -80,7 +80,7 @@ const PortfolioSection=(props)=>{
                                                 <div className={styles.card_type}>Type: <span>{project.type}</span></div>
                                                 <div className={styles.date}>{project.date}</div>
                                             </div>
-                                        <img src="/Icons/slant.svg"></img>
+                                        <img src="/icons/slant.svg"></img>
                                     </a>
                                 </div>
                                 <div className={styles.grid_flex}>
@@ -140,13 +140,13 @@ const PortfolioSection=(props)=>{
             {visibleProjects < projects.length && (
                 <button className={styles.seemore} onClick={handleSeeMore}>
                     <div>See More</div>
-                    <img src='/Icons/down_arrow.svg'></img>
+                    <img src='/icons/down_arrow.svg'></img>
                 </button>
             )}
             {visibleProjects === projects.length && (
                 <button className={styles.seemore} onClick={handleSeeLess}>
                     <div>See Less</div>
-                    <img style={{transform: 'rotateX(180deg)'}} src='/Icons/down_arrow.svg'></img>
+                    <img style={{transform: 'rotateX(180deg)'}} src='/icons/down_arrow.svg'></img>
                 </button>
             )}
             </div>
