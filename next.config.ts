@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Inline the CSS into the HTML <head> instead of a render-blocking
+    // external stylesheet. This is a single-viewport, one-visit page, so the
+    // stylesheet cache is never reused — inlining removes a round-trip and
+    // improves LCP/FCP.
+    inlineCss: true,
+  },
   turbopack: {
     rules: {
       // Import *.svg files as React components via SVGR (dev + build).
