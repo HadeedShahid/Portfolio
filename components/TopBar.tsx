@@ -4,11 +4,7 @@ import StatusTag from "./StatusTag";
 /** Top instrument bar: revision + location on the left, clock + status on the right. */
 export default function TopBar() {
   return (
-    <div
-      id="topBar"
-      data-draft=""
-      className="flex justify-between items-center"
-    >
+    <div id="topBar" className="flex justify-between items-center">
       <div className="flex items-center gap-[26px] phone:hidden">
         <span className="inline-flex items-center border border-accent text-accent text-[11px] tracking-[0.02em] px-[10px] py-[3px]">
           REV 2026.07

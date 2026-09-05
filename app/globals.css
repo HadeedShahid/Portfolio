@@ -37,7 +37,6 @@
 /* ── Responsive variants ──
    Declared in the same order as the prototype's media queries so that,
    when two ranges overlap, the later rule wins exactly as before. */
-@custom-variant coarse (@media (pointer: coarse));
 @custom-variant hshort (@media (max-height: 760px));
 @custom-variant compact (@media (max-width: 1250px));
 @custom-variant compact-short (@media (max-width: 1250px) and (max-height: 860px));

@@ -12,12 +12,11 @@ export default function DimensionLine() {
   return (
     <div
       id="dimWrap"
-      data-draft=""
       aria-hidden="true"
       className="flex items-center gap-[10px] text-accent-700 w-[min(880px,100%)]"
     >
       <div className="w-px h-[10px] bg-current" />
-      <div data-dimline="l" className="flex-1 h-px bg-current" />
+      <div className="flex-1 h-px bg-current" />
       <div
         id="dimText"
         suppressHydrationWarning
@@ -25,7 +24,7 @@ export default function DimensionLine() {
       >
         {readout}
       </div>
-      <div data-dimline="r" className="flex-1 h-px bg-current" />
+      <div className="flex-1 h-px bg-current" />
       <div className="w-px h-[10px] bg-current" />
     </div>
   );

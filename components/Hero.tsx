@@ -6,7 +6,6 @@ export default function Hero() {
     <div className="flex flex-col justify-center flex-1 gap-[26px]">
       <div
         id="kicker"
-        data-draft=""
         className="text-[14px] tracking-[0.24em] text-accent-700 uppercase compact-short:text-[11px] phone:text-[11px]"
       >
         Software Engineer — Front End

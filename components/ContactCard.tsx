@@ -4,13 +4,13 @@ import ArrowUpRight from "@/components/icons/arrow-up-right.svg";
 
 /** Transparent blueprint contact card: label over value, optional external arrow. */
 export default function ContactCard({ contact }: { contact: Contact }) {
+  const { Logo } = contact;
   const grow = contact.flex === 1.3 ? "flex-[1.3]" : "flex-[1]";
   const value =
     "text-[16px] font-medium compact-short:text-[13px] phone:text-[13px]";
 
   return (
     <a
-      data-draft=""
       href={contact.href}
       {...(contact.external
         ? { target: "_blank", rel: "noopener noreferrer" }
@@ -25,7 +25,13 @@ export default function ContactCard({ contact }: { contact: Contact }) {
         <span
           className={`${value} flex items-center justify-between w-full phone:w-auto phone:gap-2`}
         >
-          {contact.value} <ArrowUpRight aria-hidden="true" />
+          <span className="flex items-center gap-2 leading-none">
+            {Logo ? (
+              <Logo aria-hidden="true" className="w-[14px] h-[14px] shrink-0" />
+            ) : null}
+            {contact.value}
+          </span>
+          <ArrowUpRight aria-hidden="true" />
         </span>
       ) : (
         <span className={value}>{contact.value}</span>

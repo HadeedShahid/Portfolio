@@ -8,10 +8,7 @@ const action =
 /** Solid-accent RESUME card: a VIEW | SAVE split split by a hairline divider. */
 export default function ResumeCard() {
   return (
-    <div
-      data-draft=""
-      className="blueprint flex flex-col flex-[1.15] bg-accent text-bg compact:col-span-full"
-    >
+    <div className="blueprint flex flex-col flex-[1.15] bg-accent text-bg compact:col-span-full">
       <Corners />
       <span className="text-[11px] tracking-[0.2em] opacity-75 px-[20px] pt-[12px] compact-short:px-[14px] compact-short:pt-[8px] phone:px-[14px] phone:pt-[9px]">
         RESUME

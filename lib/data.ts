@@ -3,6 +3,7 @@ import Hatla2eeLogo from "@/components/logos/hatla2ee.svg";
 import OlxLogo from "@/components/logos/olx.svg";
 import BayutLogo from "@/components/logos/bayut.svg";
 import DubizzleLogo from "@/components/logos/dubizzle.svg";
+import XLogo from "@/components/logos/x.svg";
 
 export type Contact = {
   label: string;
@@ -12,6 +13,8 @@ export type Contact = {
   external?: boolean;
   /** flex-grow of the card in the desktop CTA row. */
   flex: number;
+  /** Optional brand mark shown beside the value. */
+  Logo?: FC<SVGProps<SVGSVGElement>>;
 };
 
 export const contacts: Contact[] = [
@@ -20,12 +23,6 @@ export const contacts: Contact[] = [
     value: "hadeed.shahid08@gmail.com",
     href: "mailto:hadeed.shahid08@gmail.com",
     flex: 1.3,
-  },
-  {
-    label: "PHONE",
-    value: "+92 323 1483650",
-    href: "tel:+923231483650",
-    flex: 1,
   },
   {
     label: "LINKEDIN",
@@ -40,6 +37,14 @@ export const contacts: Contact[] = [
     href: "https://github.com/HadeedShahid",
     external: true,
     flex: 1,
+  },
+  {
+    label: "X.COM",
+    value: "@hadeedshahid",
+    href: "https://x.com/hadeedshahid",
+    external: true,
+    flex: 1,
+    Logo: XLogo,
   },
 ];
 

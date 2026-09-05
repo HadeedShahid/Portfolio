@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     locale: siteConfig.locale,
+    alternateLocale: ["en_PK"],
     // og:image is supplied by app/opengraph-image.tsx (file convention).
   },
   twitter: {
@@ -71,6 +72,13 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     statusBarStyle: "default",
   },
+  // Geo-targeting meta for local/regional discovery (Lahore, Pakistan).
+  other: {
+    "geo.region": siteConfig.location.regionCode,
+    "geo.placename": siteConfig.location.city,
+    "geo.position": `${siteConfig.location.latitude};${siteConfig.location.longitude}`,
+    ICBM: `${siteConfig.location.latitude}, ${siteConfig.location.longitude}`,
+  },
   // Add real codes here once you register the site:
   // verification: { google: "…", other: { "msvalidate.01": "…" } },
 };
@@ -85,6 +93,7 @@ export const viewport: Viewport = {
 
 /** schema.org structured data — Person + WebSite + ProfilePage. */
 function StructuredData() {
+  const { location } = siteConfig;
   const person = {
     "@type": "Person",
     "@id": `${siteConfig.url}/#person`,
@@ -92,15 +101,54 @@ function StructuredData() {
     url: siteConfig.url,
     image: `${siteConfig.url}/opengraph-image`,
     jobTitle: siteConfig.role,
+    description: siteConfig.description,
     email: `mailto:${siteConfig.email}`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: siteConfig.location.city,
-      addressRegion: siteConfig.location.region,
-      addressCountry: siteConfig.location.country,
+      addressLocality: location.city,
+      addressRegion: location.region,
+      addressCountry: location.countryCode,
     },
-    sameAs: [siteConfig.socials.linkedin, siteConfig.socials.github],
+    homeLocation: {
+      "@type": "Place",
+      name: `${location.city}, ${location.country}`,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: location.latitude,
+        longitude: location.longitude,
+      },
+    },
+    knowsLanguage: ["English", "Urdu"],
     knowsAbout: [...siteConfig.knowsAbout],
+    sameAs: [
+      siteConfig.socials.linkedin,
+      siteConfig.socials.github,
+      siteConfig.socials.x,
+    ],
+    // "Available for hire" signals, expressed with valid schema.org types.
+    hasOccupation: {
+      "@type": "Occupation",
+      name: siteConfig.role,
+      occupationLocation: { "@type": "Country", name: location.country },
+      skills: siteConfig.knowsAbout.join(", "),
+    },
+    makesOffer: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      itemOffered: {
+        "@type": "Service",
+        serviceType: "Front-End Web Development",
+        provider: { "@id": `${siteConfig.url}/#person` },
+      },
+      areaServed: [
+        { "@type": "Country", name: location.country },
+        { "@type": "AdministrativeArea", name: "Remote / Worldwide" },
+      ],
+    },
+    seeks: {
+      "@type": "Demand",
+      name: "Front-end software engineering role (remote or Pakistan-based)",
+    },
   };
 
   const jsonLd = {

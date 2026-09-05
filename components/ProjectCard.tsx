@@ -7,7 +7,6 @@ export default function ProjectCard({ project }: { project: Project }) {
   const { Logo } = project;
   return (
     <a
-      data-draft=""
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
